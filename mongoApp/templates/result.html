@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    <head>
+		<link rel ="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    </head>
+    <style type = "text/css">
+      th:tr{
+            color: blue;
+
+        }
+        tr:nth-of-type(2n){
+            border: 1px solid black;
+            background-color: rgba(150, 150, 150, 0.5);
+
+        }
+
+        td{
+            padding: 8px 8px;
+            border: 1px solid black;
+        }
+  </style>
+ 
+
+  <body>
+
+    <h1><center> Voici les restaurants correspondant à votre recherche : <center></h1>
+
+    <center><table style = "margin-left: 20px;">
+      <th>
+        <tr style = "color : red;">
+        <td>nom du restaurant</td>
+        <td>adresse</td>
+        <td>étoiles</td>
+        <td>catégories</td>
+      </tr>
+      </th>
+
+    {% for doc in docs %}
+    <tr>
+      <td>{{ doc["name"] }}</td>
+      <td>{{ doc["address"] }}</td>
+      <td>{{ doc["stars"] }}</td>
+      <td>{{ doc["categories"] }}</td>
+
+    {%endfor%}
+    </tr></center></table>
+  </body>
+
+<body>
+  <h1><center> Par rapport à votre emplacement :</center></h1>
+  <center>{% include "map.html" %}</center>
+</body>
+    </tr>
+
+  <a href = "{{ url_for('home') }}"> Retourner à la page d'accueil pour effectuer une autre recherche </a>
+</html>

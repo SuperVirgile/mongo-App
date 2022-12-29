@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<link rel ="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+	</head>
+
+<body>
+    <h1>Indiquez votre requête et vos coordonnées géographiques</h1>
+    <form action="." method="POST">
+    	Requête
+        <input type="text" name="text">
+        Longitude
+        <input type="text" name="longitude">
+        Latitude
+        <input type="text" name="latitude">
+        Distance maximum en kilomètres
+        <input type="text" name="distance">
+        <button type="submit">OK</button>
+    </form>
+</body>
+</html>

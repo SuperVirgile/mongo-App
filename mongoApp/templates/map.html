@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0da8070042bb437195a899be35a28918 {
+                    position: relative;
+                    width: 750.0px;
+                    height: 600.0px;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_0da8070042bb437195a899be35a28918" ></div>
+        
+</body>
+<script>    
+    
+            var map_0da8070042bb437195a899be35a28918 = L.map(
+                "map_0da8070042bb437195a899be35a28918",
+                {
+                    center: [36.0, -115.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_035a291de8704957ac18ade1d71a93fb = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_0da8070042bb437195a899be35a28918);
+        
+    
+            var marker_8f279074e5a34c7d82ebb9c669df6d46 = L.marker(
+                [36.0, -115.0],
+                {}
+            ).addTo(map_0da8070042bb437195a899be35a28918);
+        
+    
+            var icon_3532de2091f34babab660fec088a2088 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8f279074e5a34c7d82ebb9c669df6d46.setIcon(icon_3532de2091f34babab660fec088a2088);
+        
+    
+            var marker_f8adea93fc27445e8dfed24aebe3a573 = L.marker(
+                [36.1584345, -115.1210314],
+                {}
+            ).addTo(map_0da8070042bb437195a899be35a28918);
+        
+    
+            var icon_07a5ad3e6a5a46f697968210ec3a9fc9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_f8adea93fc27445e8dfed24aebe3a573.setIcon(icon_07a5ad3e6a5a46f697968210ec3a9fc9);
+        
+    
+        var popup_3110d4b2206a41d5b4d8fd34ef06543c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4f1f008f19854805b326268efc3c503e = $(`<div id="html_4f1f008f19854805b326268efc3c503e" style="width: 100.0%; height: 100.0%;">Antojitos Sinaloa Mexican Restaurant</div>`)[0];
+            popup_3110d4b2206a41d5b4d8fd34ef06543c.setContent(html_4f1f008f19854805b326268efc3c503e);
+        
+
+        marker_f8adea93fc27445e8dfed24aebe3a573.bindPopup(popup_3110d4b2206a41d5b4d8fd34ef06543c)
+        ;
+
+        
+    
+    
+            var marker_c7cc5fdd170547f38c90d9cc204d8bc3 = L.marker(
+                [36.0781482398, -115.2430958301],
+                {}
+            ).addTo(map_0da8070042bb437195a899be35a28918);
+        
+    
+            var icon_991f0ef2468d4178bda8a06046851e68 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_c7cc5fdd170547f38c90d9cc204d8bc3.setIcon(icon_991f0ef2468d4178bda8a06046851e68);
+        
+    
+        var popup_0c9f0c823258498096080893cbf3bac5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a4460c5006a94b5f9a824758f27c3398 = $(`<div id="html_a4460c5006a94b5f9a824758f27c3398" style="width: 100.0%; height: 100.0%;">El Authentic Mexican Grill</div>`)[0];
+            popup_0c9f0c823258498096080893cbf3bac5.setContent(html_a4460c5006a94b5f9a824758f27c3398);
+        
+
+        marker_c7cc5fdd170547f38c90d9cc204d8bc3.bindPopup(popup_0c9f0c823258498096080893cbf3bac5)
+        ;
+
+        
+    
+    
+            var marker_985ae473246041ceafb630e03cc1f497 = L.marker(
+                [36.1002609, -115.1252933],
+                {}
+            ).addTo(map_0da8070042bb437195a899be35a28918);
+        
+    
+            var icon_90f9d7fb8c9d4aa9bc3cdfec59c8bdf7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_985ae473246041ceafb630e03cc1f497.setIcon(icon_90f9d7fb8c9d4aa9bc3cdfec59c8bdf7);
+        
+    
+        var popup_1a40f12f44e7476bbc2e739d538898d8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5fe75d392dd64a57a748d8813e204aed = $(`<div id="html_5fe75d392dd64a57a748d8813e204aed" style="width: 100.0%; height: 100.0%;">Toto's Mexican</div>`)[0];
+            popup_1a40f12f44e7476bbc2e739d538898d8.setContent(html_5fe75d392dd64a57a748d8813e204aed);
+        
+
+        marker_985ae473246041ceafb630e03cc1f497.bindPopup(popup_1a40f12f44e7476bbc2e739d538898d8)
+        ;
+
+        
+    
+    
+            var marker_8f36644fe071499f90280cf6d4b99bb2 = L.marker(
+                [36.1141902, -115.3037143],
+                {}
+            ).addTo(map_0da8070042bb437195a899be35a28918);
+        
+    
+            var icon_c2d8ac06785a42c9b3997c0292fccb3b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_8f36644fe071499f90280cf6d4b99bb2.setIcon(icon_c2d8ac06785a42c9b3997c0292fccb3b);
+        
+    
+        var popup_8a07ba09ec8c470e9b5f91dcda0c86a9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a137dd1d577b4f42b076ac555cfdd389 = $(`<div id="html_a137dd1d577b4f42b076ac555cfdd389" style="width: 100.0%; height: 100.0%;">Eddie's Mexican Restaurant</div>`)[0];
+            popup_8a07ba09ec8c470e9b5f91dcda0c86a9.setContent(html_a137dd1d577b4f42b076ac555cfdd389);
+        
+
+        marker_8f36644fe071499f90280cf6d4b99bb2.bindPopup(popup_8a07ba09ec8c470e9b5f91dcda0c86a9)
+        ;
+
+        
+    
+    
+            var marker_910a42d394944ec4949cac3a7ad3af6a = L.marker(
+                [36.1297417, -115.2778306],
+                {}
+            ).addTo(map_0da8070042bb437195a899be35a28918);
+        
+    
+            var icon_17f2cf49f2af48fb82db4e07c93f93fe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_910a42d394944ec4949cac3a7ad3af6a.setIcon(icon_17f2cf49f2af48fb82db4e07c93f93fe);
+        
+    
+        var popup_ce5d0d62b4d347f5abef83c59f98aecb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_78a8b25f667b4422872a93bee45e5df5 = $(`<div id="html_78a8b25f667b4422872a93bee45e5df5" style="width: 100.0%; height: 100.0%;">Durangos Mexican Grill</div>`)[0];
+            popup_ce5d0d62b4d347f5abef83c59f98aecb.setContent(html_78a8b25f667b4422872a93bee45e5df5);
+        
+
+        marker_910a42d394944ec4949cac3a7ad3af6a.bindPopup(popup_ce5d0d62b4d347f5abef83c59f98aecb)
+        ;
+
+        
+    
+    
+            var marker_848bf304d2cf43f9b43cdf426b1f9b37 = L.marker(
+                [36.024326388, -115.1729258895],
+                {}
+            ).addTo(map_0da8070042bb437195a899be35a28918);
+        
+    
+            var icon_54d645dae4254c5fb5ab89b56bf73b49 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_848bf304d2cf43f9b43cdf426b1f9b37.setIcon(icon_54d645dae4254c5fb5ab89b56bf73b49);
+        
+    
+        var popup_58045e50bf4647478c829aaefecf50da = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8289dcfcc168430a8ad6206b7977c17e = $(`<div id="html_8289dcfcc168430a8ad6206b7977c17e" style="width: 100.0%; height: 100.0%;">Rodolfo's Mexican Grill</div>`)[0];
+            popup_58045e50bf4647478c829aaefecf50da.setContent(html_8289dcfcc168430a8ad6206b7977c17e);
+        
+
+        marker_848bf304d2cf43f9b43cdf426b1f9b37.bindPopup(popup_58045e50bf4647478c829aaefecf50da)
+        ;
+
+        
+    
+    
+            var marker_cb63848585404680ad3d389b456653cb = L.marker(
+                [36.1970373672, -115.2234090865],
+                {}
+            ).addTo(map_0da8070042bb437195a899be35a28918);
+        
+    
+            var icon_eff7565858ed4d6ab53506033d5a1e6d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_cb63848585404680ad3d389b456653cb.setIcon(icon_eff7565858ed4d6ab53506033d5a1e6d);
+        
+    
+        var popup_73a1141111664c4291a663c945ca5426 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1bc03012d9df4f6880bf600d475611d4 = $(`<div id="html_1bc03012d9df4f6880bf600d475611d4" style="width: 100.0%; height: 100.0%;">Tony's Mexican Food</div>`)[0];
+            popup_73a1141111664c4291a663c945ca5426.setContent(html_1bc03012d9df4f6880bf600d475611d4);
+        
+
+        marker_cb63848585404680ad3d389b456653cb.bindPopup(popup_73a1141111664c4291a663c945ca5426)
+        ;
+
+        
+    
+    
+            var marker_b32a4cb0f1a6440caf0a49fa64b07153 = L.marker(
+                [36.2498922, -115.2441383],
+                {}
+            ).addTo(map_0da8070042bb437195a899be35a28918);
+        
+    
+            var icon_e7aa85e5b08c43548900df0020a99111 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_b32a4cb0f1a6440caf0a49fa64b07153.setIcon(icon_e7aa85e5b08c43548900df0020a99111);
+        
+    
+        var popup_a99868f3670244b4bef5d3e50e6f2f59 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7a100afae3084cbd931eb8f26fb57385 = $(`<div id="html_7a100afae3084cbd931eb8f26fb57385" style="width: 100.0%; height: 100.0%;">Cabo Mexican Restaurant</div>`)[0];
+            popup_a99868f3670244b4bef5d3e50e6f2f59.setContent(html_7a100afae3084cbd931eb8f26fb57385);
+        
+
+        marker_b32a4cb0f1a6440caf0a49fa64b07153.bindPopup(popup_a99868f3670244b4bef5d3e50e6f2f59)
+        ;
+
+        
+    
+    
+            var marker_aab7a8367da14dcb98d649c42f3fb114 = L.marker(
+                [36.0976173, -115.2088159],
+                {}
+            ).addTo(map_0da8070042bb437195a899be35a28918);
+        
+    
+            var icon_09396571bcd84f0d809455027935365b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_aab7a8367da14dcb98d649c42f3fb114.setIcon(icon_09396571bcd84f0d809455027935365b);
+        
+    
+        var popup_e3c2405f2a304f798ff9ee617cc1d044 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_be7e939e48a1474884da8ae7af5c004d = $(`<div id="html_be7e939e48a1474884da8ae7af5c004d" style="width: 100.0%; height: 100.0%;">Felipito's Mexican Food</div>`)[0];
+            popup_e3c2405f2a304f798ff9ee617cc1d044.setContent(html_be7e939e48a1474884da8ae7af5c004d);
+        
+
+        marker_aab7a8367da14dcb98d649c42f3fb114.bindPopup(popup_e3c2405f2a304f798ff9ee617cc1d044)
+        ;
+
+        
+    
+    
+            var marker_99e05adba1be415eb2e9fc9b28450821 = L.marker(
+                [36.1122889, -115.297923],
+                {}
+            ).addTo(map_0da8070042bb437195a899be35a28918);
+        
+    
+            var icon_c57b39c48f8f4a3bb0c581e69c8b1972 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_99e05adba1be415eb2e9fc9b28450821.setIcon(icon_c57b39c48f8f4a3bb0c581e69c8b1972);
+        
+    
+        var popup_6edb8984024544c89e3c48aabc703c20 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a4366dc284ab4fde9ca6dc2f21e7187b = $(`<div id="html_a4366dc284ab4fde9ca6dc2f21e7187b" style="width: 100.0%; height: 100.0%;">Bajio Mexican Grill</div>`)[0];
+            popup_6edb8984024544c89e3c48aabc703c20.setContent(html_a4366dc284ab4fde9ca6dc2f21e7187b);
+        
+
+        marker_99e05adba1be415eb2e9fc9b28450821.bindPopup(popup_6edb8984024544c89e3c48aabc703c20)
+        ;
+
+        
+    
+</script>
