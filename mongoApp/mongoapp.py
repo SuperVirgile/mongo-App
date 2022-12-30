@@ -4,28 +4,29 @@ from flask import render_template
 from pymongo import MongoClient
 import folium
 
-#Pour pouvoir utiliser FLASK !
+# Flask setup
 app = Flask(__name__)
 
-#On ouvre notre connection avec notre base de données MongoDB
+# Connection MongoDB
 client = MongoClient('localhost', 27017)
 db = client['Cartier']
 collection = db['Virgile']
 
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 
+# Obtention des documents par query et coordonnées
 def get_docs_by_query_and_gps(query, lat, long, distance) :
     docs = collection.find({
     "$and" : [
-    {"$text": { "$search": query }}, #notre requête va aller chercher l'index text que nous avons créé
-    {"loc":{ "$geoWithin": { "$centerSphere": [ [lat, long], distance / 6378.1 ] } } } #la latitude et la longitude sont transférées ici
-    ] #la division de distance par le diamètre de la planète terre (une sphère)
+    {"$text": { "$search": query }}, 
+    {"loc":{ "$geoWithin": { "$centerSphere": [ [lat, long], distance / 6378.1 ] } } } 
+    ]
     },
-    {"_id": 0, "name" : 1, "address" : 1, "categories" : 1, "stars" : 1} #les catégories que nous choisissons d'afficher -> reste simple et indicatif !
+    {"_id": 0, "name" : 1, "address" : 1, "categories" : 1, "stars" : 1}
     )
-    return(list(docs[:10])) #nous limitons les résultats de notre requêtes aux 10 premiers éléments trouvés
+    return(list(docs[:10])) #limite à 10 résultats
 
-#On utilise ici folium pour générer notre carte :
+# Utilisation Folium pour obtention d'une carte
 def get_map(query, lat, long, distance) :
     coordonnees = collection.find({
     "$and" : [
@@ -35,10 +36,10 @@ def get_map(query, lat, long, distance) :
     },
     {"_id": 0, "name" : 1, "loc.coordinates":1}
     ).limit(10)
-    # On va se référer à l'endroit où se trouve l'utilisateur pour que la carte soit centré dessus
+    
     map = folium.Map(width=750,height=600, location=[long,lat], zoom_start=12)
-    folium.Marker(location=[long,lat],icon=folium.Icon(icon="home")).add_to(map) #l'icône de notre utilisateur
-    #Ajoute la localisation de tous les résultats de la requête - on change l'icône pour que ça envoie quelque chose de différent ! -> les restau en orange !
+    folium.Marker(location=[long,lat],icon=folium.Icon(icon="home")).add_to(map)
+    
     for coord in list(coordonnees):
         folium.Marker(location = sorted(coord["loc"]["coordinates"], reverse=True), popup = coord["name"], icon = folium.Icon(color="orange")).add_to(map)
     return(map)
